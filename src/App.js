@@ -1,7 +1,14 @@
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+
+import classes from './App.module.css';
 
 function App() {
-  return <h1>Hello World...!!!</h1>
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
