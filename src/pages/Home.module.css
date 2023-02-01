@@ -5,7 +5,11 @@
 .head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.form {
   margin-bottom: 30px;
 }
 
@@ -13,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 5px;
 }
 
 .add-btn button, .search button{
@@ -22,8 +27,8 @@
 }
 
 .search input {
-  margin: 10px 5px;
   padding: 5px 5px;
+  font-size: 18px;
 }
 
 .list-container {
@@ -44,5 +49,10 @@
 .list-container td {
   padding: 10px;
   background: #ddd;
+  font-size: 18px;
+}
+
+.message {
+  text-align: center;
   font-size: 18px;
 }

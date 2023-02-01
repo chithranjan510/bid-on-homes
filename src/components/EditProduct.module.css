@@ -1,0 +1,55 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  background: #000;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.form {
+  position: absolute;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0 0 5px #000;
+  border-radius: 10px;
+  background: #0e6b85;
+  z-index: 100;
+}
+
+.form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 7px 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.form textarea {
+  min-height: 100px;
+}
+
+.button button {
+  width: 100%;
+  padding: 7px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
