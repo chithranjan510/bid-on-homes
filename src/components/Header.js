@@ -23,7 +23,8 @@ const Header = () => {
               to='home'
               className={({ isActive }) => (isActive ? classes.active : '')}
             >
-              <i className='fa-solid fa-house-user'></i>
+              {!isLoggedIn && <i className='fa-solid fa-house-user'></i>}
+              {isLoggedIn && <i className="fa-solid fa-user"></i>}
               {isLoggedIn ? localStorage.getItem('name') : 'Home'}
             </NavLink>
           </li>

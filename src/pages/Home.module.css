@@ -1,0 +1,48 @@
+.container {
+  padding: 50px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.add-btn button, .search button{
+  padding: 5px 20px;
+  font-size: 18px;
+  margin: 10px 5px;
+}
+
+.search input {
+  margin: 10px 5px;
+  padding: 5px 5px;
+}
+
+.list-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list-container th, .list-container td {
+  text-align: center;
+}
+
+.list-container th {
+  padding: 10px;
+  font-size: 22px;
+  background: #ccc;
+}
+
+.list-container td {
+  padding: 10px;
+  background: #ddd;
+  font-size: 18px;
+}
