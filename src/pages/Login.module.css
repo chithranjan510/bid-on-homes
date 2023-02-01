@@ -1,0 +1,38 @@
+.form {
+  width: 500px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px #000;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.name, .email {
+  margin-bottom: 20px;
+}
+
+.name, .email, .button button {
+  font-size: 16px;
+}
+
+.button {
+  text-align: center;
+}
+
+.button button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-weight: 700;
+  cursor: pointer;
+}
+
