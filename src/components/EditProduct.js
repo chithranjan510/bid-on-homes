@@ -21,7 +21,7 @@ const EditProduct = (props) => {
       id: props.product.id,
       name: nameRef.current.value,
       description: descriptionRef.current.value,
-      price: priceRef.current.value,
+      price: (+priceRef.current.value).toFixed(2),
       quantity: quantityRef.current.value,
       imageUrl: imageRef.current.value,
     };
@@ -38,7 +38,7 @@ const EditProduct = (props) => {
   useEffect(() => {
     nameRef.current.value = props.product.name;
     descriptionRef.current.value = props.product.description;
-    priceRef.current.value = (+props.product.price).toFixed(2);
+    priceRef.current.value = props.product.price;
     quantityRef.current.value = props.product.quantity;
     imageRef.current.value = props.product.imageUrl;
   });
