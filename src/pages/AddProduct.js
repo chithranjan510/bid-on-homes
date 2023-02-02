@@ -36,10 +36,10 @@ const AddProduct = () => {
 
   return (
       <form className={classes.form} onSubmit={addProductHandler}>
-        <input type='text' placeholder='Name' required ref={nameRef} />
+        <input type='text' placeholder='Name' ref={nameRef} required/>
         <textarea placeholder='Description' ref={descriptionRef}/>
-        <input type='number' placeholder='Price' step='0.1' ref={priceRef} required/>
-        <input type='number' placeholder='Quantity' step='1' ref={quantityRef} required/>
+        <input type='number' placeholder='Price' min='0.1' step='0.1' ref={priceRef} required/>
+        <input type='number' placeholder='Quantity' min='1' step='1' ref={quantityRef} required/>
         <input type='text' placeholder='Image Url' ref={imageRef}/>
         <div className={classes.button}>
           <button type='submit'>Add Product</button>
