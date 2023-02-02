@@ -38,7 +38,6 @@ const Home = () => {
   ));
 
   const searchAndFilterHandler = () => {
-    // console.log(nameRef.current.value, priceRef.current.value, quantityRef.current.value)
     setSearchAndFilterInput({
       name: nameRef.current.value,
       price: priceRef.current.value,
@@ -97,7 +96,7 @@ const Home = () => {
         </table>
       ) : (
         <p className={classes.message}>
-          Your product list is empty. Please add product by clicking on
+          The product list is empty. Please add a product by clicking on
           <b> "Add Product"</b> button
         </p>
       )}

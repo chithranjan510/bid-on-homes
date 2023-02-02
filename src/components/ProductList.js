@@ -15,9 +15,9 @@ const ProductList = (props) => {
     props.edit(true, props.product);
   };
 
-  const nameSearch = props.product.name.includes(
-    props.searchAndFilterInputValue.name
-  );
+  const nameSearch = props.product.name
+    .toLowerCase()
+    .includes(props.searchAndFilterInputValue.name.toLowerCase());
 
   const priceSearch = props.product.price
     .toString()
@@ -26,8 +26,6 @@ const ProductList = (props) => {
   const quantitySearch = props.product.quantity
     .toString()
     .includes(props.searchAndFilterInputValue.quantity);
-
-  // console.log(nameSearch, priceSearch, quantitySearch);
 
   return (
     <>

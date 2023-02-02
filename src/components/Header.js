@@ -5,13 +5,24 @@ import classes from './Header.module.css';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { loginAction } from '../store/login-slice';
+import { productAction } from '../store/product-slice';
+import { persistor } from '../store/redux-store';
 
 const Header = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
 
   const logoutHandler = () => {
-    dispatch(loginAction.logout());
+    persistor.pause();
+    persistor
+      .flush()
+      .then(() => {
+        return persistor.purge();
+      })
+      .then(() => {
+        dispatch(loginAction.logout());
+        dispatch(productAction.logout());
+      });
   };
 
   return (
@@ -24,7 +35,7 @@ const Header = () => {
               className={({ isActive }) => (isActive ? classes.active : '')}
             >
               {!isLoggedIn && <i className='fa-solid fa-house-user'></i>}
-              {isLoggedIn && <i className="fa-solid fa-user"></i>}
+              {isLoggedIn && <i className='fa-solid fa-user'></i>}
               {isLoggedIn ? localStorage.getItem('name') : 'Home'}
             </NavLink>
           </li>

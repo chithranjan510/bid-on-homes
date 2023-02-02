@@ -22,6 +22,9 @@ const productSlice = createSlice({
 
       state.products[productIndex] = action.payload;
     },
+    logout(state) {
+      state.products = [];
+    }
   },
 });
 

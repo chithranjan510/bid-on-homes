@@ -38,7 +38,7 @@ const EditProduct = (props) => {
   useEffect(() => {
     nameRef.current.value = props.product.name;
     descriptionRef.current.value = props.product.description;
-    priceRef.current.value = props.product.price;
+    priceRef.current.value = (+props.product.price).toFixed(2);
     quantityRef.current.value = props.product.quantity;
     imageRef.current.value = props.product.imageUrl;
   });
@@ -52,22 +52,22 @@ const EditProduct = (props) => {
         <input
           type='number'
           placeholder='Price'
-          step='0.1'
+          min='0'
+          step='0.01'
           ref={priceRef}
           required
         />
         <input
           type='number'
           placeholder='Quantity'
+          min='0'
           step='1'
           ref={quantityRef}
           required
         />
         <input type='text' placeholder='Image Url' ref={imageRef} />
         <div className={classes.button}>
-          <button type='submit'>
-            Edit Product
-          </button>
+          <button type='submit'>Edit Product</button>
         </div>
       </form>
     </div>

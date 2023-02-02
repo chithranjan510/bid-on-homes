@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import classes from './App.module.css';
-
 import Header from './components/Header';
 import Login from './pages/Login';
 import Home from './pages/Home';
