@@ -8,7 +8,6 @@ const loginSlice = createSlice({
   reducers: {
     login(state) {
       state.isLoggedIn = true;
-      window.location.reload();
     },
     logout(state) {
       localStorage.removeItem('name');

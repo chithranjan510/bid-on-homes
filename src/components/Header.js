@@ -22,6 +22,7 @@ const Header = () => {
       .then(() => {
         dispatch(loginAction.logout());
         dispatch(productAction.logout());
+        persistor.persist();
       });
   };
 
